@@ -1,0 +1,92 @@
+#define BLYNK_TEMPLATE_ID "TMPL3qifXw2bD"
+#define BLYNK_DEVICE_NAME "ServoControl"
+#define BLYNK_AUTH_TOKEN  "Robotic Arm"
+
+#include <ESP8266WiFi.h>
+#include <BlynkSimpleEsp8266.h>
+#include <Servo.h>
+
+char auth[] = BLYNK_AUTH_TOKEN;
+char ssid[] = "Project";
+char pass[] = "12345678";
+
+Servo servo1;
+Servo servo2;
+Servo servo3;
+Servo servo4;
+Servo servo5;
+Servo servo6;
+
+int initialAngle = 90;
+
+void setup()
+{
+  Serial.begin(115200);
+  Serial.println("Starting Servo Control with Blynk...");
+
+  servo1.attach(D1); 
+  servo2.attach(D2);  
+  servo3.attach(D3);  
+  servo4.attach(D4);  
+  servo5.attach(D5);  
+  servo6.attach(D6);  
+
+  servo1.write(initialAngle);
+  servo2.write(initialAngle);
+  servo3.write(initialAngle);
+  servo4.write(initialAngle);
+  servo5.write(initialAngle);
+  servo6.write(initialAngle);
+
+  Serial.println("All servos moved to initial position (90°).");
+
+  Blynk.begin(auth, ssid, pass);
+  Serial.println("Connected to Blynk Cloud!");
+}
+
+BLYNK_WRITE(V1)
+{
+  int angle = param.asInt();
+  servo1.write(angle);
+  Serial.print("Servo1: "); Serial.println(angle);
+}
+
+BLYNK_WRITE(V2)
+{
+  int angle = param.asInt();
+  servo2.write(angle);
+  Serial.print("Servo2: "); Serial.println(angle);
+}
+
+BLYNK_WRITE(V3)
+{
+  int angle = param.asInt();
+  servo3.write(angle);
+  Serial.print("Servo3: "); Serial.println(angle);
+}
+
+BLYNK_WRITE(V4)
+{
+  int angle = param.asInt();
+  servo4.write(angle);
+  Serial.print("Servo4: "); Serial.println(angle);
+}
+
+BLYNK_WRITE(V5)
+{
+  int angle = param.asInt();
+  servo5.write(angle);
+  Serial.print("Servo5: "); Serial.println(angle);
+}
+
+BLYNK_WRITE(V6)
+{
+  int angle = param.asInt();
+  servo6.write(angle);
+  Serial.print("Servo6: "); Serial.println(angle);
+}
+
+void loop()
+{
+  Blynk.run();
+}6:52 PM 11/9/2025
