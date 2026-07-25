@@ -1,0 +1,15 @@
+1.Explain the architecture of Industrial Automation Systems (SCADA, DCS, PLC) and discuss their roles in modern industries with suitable block diagrams.
+2.Compare IT security and OT (IACS) security paradigms, highlighting key differences in design, operation, and risk management.
+3.Discuss industrial communication protocols such as Modbus, Profibus, and Ethernet/IP, including their vulnerabilities and security enhancements.
+4.Analyse the OSI model in the context of industrial communication systems and explain how attacks can occur at different layers.
+5.Explain threat modelling in Industrial Control Systems (ICS) and classify various types of cyber-attacks with real-world examples.
+6.Discuss the role of firewalls, VPN, and network segmentation in securing industrial networks, including architecture diagrams.
+7.Explain cryptography techniques used in industrial cybersecurity, and evaluate their effectiveness in resource-constrained environments.
+8.Compare traditional industrial systems with smart industries (Industry 4.0/5.0) in terms of cybersecurity challenges and solutions.
+9.Perform a detailed case study on the Stuxnet attack, including attack methodology, impact, and lessons learned for industrial security.
+10.Explain cybersecurity risk assessment and management in ICS, including methodologies, tools, and mitigation strategies.
+11.Discuss Intrusion Detection Systems (IDS) in industrial environments, including types, working principles, and limitations.
+12.Explain the NIST Cybersecurity Framework and IEC 62443 standards, and analyse their applicability in industrial systems.
+13.Discuss protection mechanisms against Electromagnetic Pulse (HEMP) attacks and their relevance in critical infrastructure.
+14.Design a secure Industrial Control System architecture, incorporating best practices for monitoring, control, and defence mechanisms.
+15.Explain the importance of cybersecurity awareness, training, and policy implementation in industrial organisations, with practical examples.
